@@ -10,4 +10,6 @@
 #cmakedefine01 HAVE_SYS_PROCCTL_H
 #cmakedefine01 HAVE_PROC_TRACE_CTL
 
+#define SEVENLIKE @SEVENLIKE@
+
 #endif

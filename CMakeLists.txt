@@ -4,11 +4,13 @@ project(polkit-kde-agent-1)
 set(PROJECT_VERSION "6.5.4")
 
 set(QT_MIN_VERSION "6.9.0")
-set(KF6_MIN_VERSION "6.18.0")
+set(KF6_MIN_VERSION "6.17.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(SEVENLIKE true)
 
 # we need some parts of the ECM CMake helpers
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)

@@ -6,6 +6,7 @@
 */
 #include "QuickAuthDialog.h"
 #include "IdentitiesModel.h"
+#include "config.h"
 
 #include <PolkitQt1/Authority>
 
@@ -44,6 +45,8 @@ QuickAuthDialog::QuickAuthDialog(const QString &actionId,
             break;
         }
     }
+
+    props.insert("sevenLike", SEVENLIKE);
 
     engine->setInitialProperties(props);
     engine->rootContext()->setContextObject(new KLocalizedQmlContext(engine));

@@ -40,6 +40,7 @@ QuickAuthDialog::QuickAuthDialog(const QString &actionId,
             props.insert("descriptionActionId", desc.actionId());
             props.insert("descriptionVendorName", desc.vendorName());
             props.insert("descriptionVendorUrl", desc.vendorUrl());
+            props.insert("descriptionIcon", desc.iconName());
             break;
         }
     }

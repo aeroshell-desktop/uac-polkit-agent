@@ -414,5 +414,5 @@ Kirigami.AbstractApplicationWindow {
             }
         }
     }
-    Component.onCompleted: executable.exec("kreadconfig6 --file ~/.config/kdeglobals --group Sounds --key Theme");
+    //Component.onCompleted: executable.exec("kreadconfig6 --file ~/.config/kdeglobals --group Sounds --key Theme");
 }

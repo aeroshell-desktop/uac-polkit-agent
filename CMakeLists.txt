@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(polkit-kde-agent-1)
-set(PROJECT_VERSION "6.5.4")
+project(uac-polkit-agent)
+set(PROJECT_VERSION "6.5.5")
 
 set(QT_MIN_VERSION "6.9.0")
 set(KF6_MIN_VERSION "6.17.0")
@@ -72,9 +72,9 @@ set(policykit_SRCS
     IdentitiesModel.cpp
 )
 
-add_executable(polkit-kde-authentication-agent-1 ${policykit_SRCS})
+add_executable(uac-polkit-agent ${policykit_SRCS})
 
-target_link_libraries(polkit-kde-authentication-agent-1
+target_link_libraries(uac-polkit-agent
     KF6::DBusAddons
     KF6::WindowSystem
     KF6::CoreAddons
@@ -88,16 +88,17 @@ target_link_libraries(polkit-kde-authentication-agent-1
     PolkitQt6-1::Agent
 )
 
-configure_file(polkit-kde-authentication-agent-1.desktop.cmake ${CMAKE_BINARY_DIR}/polkit-kde-authentication-agent-1.desktop)
+configure_file(uac-polkit-agent.desktop.cmake ${CMAKE_BINARY_DIR}/uac-polkit-agent.desktop)
 
-install(TARGETS polkit-kde-authentication-agent-1 DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+install(TARGETS uac-polkit-agent DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 
-install(FILES ${CMAKE_BINARY_DIR}/polkit-kde-authentication-agent-1.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
-install(FILES ${CMAKE_BINARY_DIR}/polkit-kde-authentication-agent-1.desktop DESTINATION ${KDE_INSTALL_APPDIR} RENAME org.kde.polkit-kde-authentication-agent-1.desktop)
+install(FILES ${CMAKE_BINARY_DIR}/uac-polkit-agent.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(FILES ${CMAKE_BINARY_DIR}/uac-polkit-agent.desktop DESTINATION ${KDE_INSTALL_APPDIR} RENAME io.gitgud.wackyideas.uac-polkit-agent.desktop)
 
-ecm_install_configured_files(INPUT plasma-polkit-agent.service.in DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
+ecm_install_configured_files(INPUT uac-polkit-agent.conf.in DESTINATION ${KDE_INSTALL_SYSCONFDIR}/systemd/user/plasma-polkit-agent.service.d/)
+ecm_install_configured_files(INPUT uac-polkit-agent.service.in DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 
-install(FILES polkit-kde-authentication-agent-1.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
+install(FILES uac-polkit-agent.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 
 # add clang-format target for all our real source files
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)

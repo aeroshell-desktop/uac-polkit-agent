@@ -40,15 +40,16 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
     app.setQuitOnLastWindowClosed(false);
+    app.setApplicationName("polkit-kde-authentication-agent-1");
 
-    KLocalizedString::setApplicationDomain(QByteArrayLiteral("polkit-kde-authentication-agent-1"));
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("uac-polkit-agent"));
 
-    KAboutData aboutData("polkit-kde-authentication-agent-1", QString(), POLKIT_KDE_1_VERSION);
+    KAboutData aboutData("polkit-kde-authentication-agent-1", QString(), UAC_POLKIT_VERSION);
     aboutData.addLicense(KAboutLicense::GPL);
     aboutData.addCredit(i18n("(c) 2009 Red Hat, Inc."));
     aboutData.addAuthor(i18n("Lukáš Tinkl"), i18n("Maintainer"), "ltinkl@redhat.com");
     aboutData.addAuthor(i18n("Jaroslav Reznik"), i18n("Former maintainer"), "jreznik@redhat.com");
-    aboutData.setProductName("policykit-kde/polkit-kde-authentication-agent-1");
+    aboutData.setProductName("policykit-atp/polkit-kde-authentication-agent-1");
 
     KAboutData::setApplicationData(aboutData);
 

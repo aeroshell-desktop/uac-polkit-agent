@@ -1,6 +1,6 @@
 # UAC Polkit Agent 
 
-UAC Polkit Agent is an alternative frontend designed to look like the User Account Control dialog on Windows Vista and 7. It's designed to coexist alongside [polkit-kde-agent-1](https://invent.kde.org/plasma/polkit-kde-agent-1), which can be replaced session-wide by setting the `USE_UAC_AGENT` environment variable to `1`. If the environment variable isn't defined, the regular Plasma agent is activated instead. This is done by creating an appropriate systemd drop-in file which handles the override logic. This is intended to be used with the AeroThemePlasma session, while the regular Plasma agent is used in the Plasma session.
+UAC Polkit Agent is an alternative frontend designed to look like the User Account Control dialog on Windows Vista and 7. It's designed to coexist alongside [polkit-kde-agent-1](https://invent.kde.org/plasma/polkit-kde-agent-1), which can be replaced session-wide by setting the `USE_UAC_AGENT` environment variable to `1`. If the environment variable isn't defined, the regular Plasma agent is activated instead. This is done by creating an appropriate systemd drop-in file which handles the override logic. This is intended to be used with the AeroShell-based sessions, while the regular Plasma agent is used in the Plasma session.
 
 ## Standalone usage 
 

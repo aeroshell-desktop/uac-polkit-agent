@@ -1,5 +1,5 @@
 [Unit]
-Description=AeroThemePlasma PolicyKit Authentication Agent
+Description=AeroShell PolicyKit Authentication Agent
 
 [Service]
 ExecStart=

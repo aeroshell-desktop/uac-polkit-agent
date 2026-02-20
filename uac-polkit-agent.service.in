@@ -1,5 +1,5 @@
 [Unit]
-Description=AeroThemePlasma PolicyKit Authentication Agent
+Description=AeroShell PolicyKit Authentication Agent
 PartOf=graphical-session.target
 After=plasma-core.target
 Conflicts=plasma-polkit-agent.target

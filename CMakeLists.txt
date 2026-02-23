@@ -10,8 +10,6 @@ set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(SEVENLIKE true)
-
 # we need some parts of the ECM CMake helpers
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -36,6 +34,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
   DBusAddons
   CoreAddons
   Crash
+  Config
 )
 
 include(CheckIncludeFile)
@@ -82,11 +81,14 @@ target_link_libraries(uac-polkit-agent
     KF6::Crash
     KF6::I18nQml
     KF6::Notifications
+    KF6::ConfigCore
+    KF6::ConfigGui
     Qt::Qml
     Qt::Quick
     Qt::Widgets
     PolkitQt6-1::Agent
 )
+
 
 configure_file(uac-polkit-agent.desktop.cmake ${CMAKE_BINARY_DIR}/uac-polkit-agent.desktop)
 

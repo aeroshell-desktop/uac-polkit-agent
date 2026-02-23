@@ -14,6 +14,8 @@
 #include <PolkitQt1/Details>
 #include <PolkitQt1/Identity>
 
+#include <KConfig>
+
 class QuickAuthDialog : public QObject
 {
     Q_OBJECT
@@ -43,6 +45,7 @@ Q_SIGNALS:
 private:
     QWindow *m_theDialog = nullptr;
     QString m_actionId;
+    KConfig m_config;
 };
 
 #endif

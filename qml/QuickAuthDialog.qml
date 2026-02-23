@@ -45,7 +45,7 @@ Kirigami.AbstractApplicationWindow {
     property string descriptionVendorUrl
     property string descriptionIcon
 
-    property bool sevenLike
+    property bool sevenLike: true
 
     signal accept()
     signal reject()

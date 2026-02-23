@@ -10,6 +10,7 @@
 
 #include <PolkitQt1/Authority>
 
+#include <KConfigGroup>
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
 #include <KNotification>
@@ -27,10 +28,12 @@ QuickAuthDialog::QuickAuthDialog(const QString &actionId,
                                  const PolkitQt1::Identity::List &identities)
     : QObject(nullptr)
     , m_actionId(actionId)
+    , m_config("uacpolkitagentrc")
 {
     auto engine = new QQmlApplicationEngine(this);
     QVariantMap props = {
         {"mainText", message},
+        {"sevenLike", m_config.group("General").readEntry("sevenLike", true)},
     };
 
     const auto actions = PolkitQt1::Authority::instance()->enumerateActionsSync();
@@ -45,8 +48,6 @@ QuickAuthDialog::QuickAuthDialog(const QString &actionId,
             break;
         }
     }
-
-    props.insert("sevenLike", SEVENLIKE);
 
     engine->setInitialProperties(props);
     engine->rootContext()->setContextObject(new KLocalizedQmlContext(engine));

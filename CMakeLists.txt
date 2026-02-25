@@ -92,7 +92,7 @@ target_link_libraries(uac-polkit-agent
 
 configure_file(uac-polkit-agent.desktop.cmake ${CMAKE_BINARY_DIR}/uac-polkit-agent.desktop)
 
-install(TARGETS uac-polkit-agent DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+install(TARGETS uac-polkit-agent DESTINATION ${KDE_INSTALL_LIBDIR})
 
 install(FILES ${CMAKE_BINARY_DIR}/uac-polkit-agent.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 install(FILES ${CMAKE_BINARY_DIR}/uac-polkit-agent.desktop DESTINATION ${KDE_INSTALL_APPDIR} RENAME io.gitgud.wackyideas.uac-polkit-agent.desktop)

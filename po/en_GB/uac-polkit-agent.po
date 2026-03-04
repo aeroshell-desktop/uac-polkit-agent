@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"Report-Msgid-Bugs-To: https://gitgud.io/aeroshell/uac-polkit-agent/-/issues\n"
+"POT-Creation-Date: 2026-03-04 18:33+0100\n"
 "PO-Revision-Date: 2024-05-20 19:37+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Andrew Coles, Steve Allewell"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "andrew_coles@yahoo.co.uk, steve.allewell@gmail.com"
 
 #: IdentitiesModel.cpp:27
 #, kde-format
@@ -39,27 +29,27 @@ msgctxt "%1 is the full user name, %2 is the user login name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: main.cpp:48
+#: main.cpp:49
 #, kde-format
 msgid "(c) 2009 Red Hat, Inc."
 msgstr "(c) 2009 Red Hat, Inc."
 
-#: main.cpp:49
+#: main.cpp:50
 #, kde-format
 msgid "Lukáš Tinkl"
 msgstr "Lukáš Tinkl"
 
-#: main.cpp:49
+#: main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Maintainer"
 
-#: main.cpp:50
+#: main.cpp:51
 #, kde-format
 msgid "Jaroslav Reznik"
 msgstr "Jaroslav Reznik"
 
-#: main.cpp:50
+#: main.cpp:51
 #, kde-format
 msgid "Former maintainer"
 msgstr "Former maintainer"
@@ -76,12 +66,12 @@ msgid "No user to authenticate as. Please check your system configuration."
 msgstr "No user to authenticate as. Please check your system configuration."
 
 #: qml/MobileQuickAuthDialog.qml:16 qml/MobileQuickAuthDialog.qml:108
-#: qml/QuickAuthDialog.qml:16 QuickAuthDialog.cpp:110
+#: QuickAuthDialog.cpp:115
 #, kde-format
 msgid "Authentication Required"
 msgstr "Authentication Required"
 
-#: qml/MobileQuickAuthDialog.qml:57 qml/QuickAuthDialog.qml:72
+#: qml/MobileQuickAuthDialog.qml:57 qml/QuickAuthDialog.qml:357
 #, kde-format
 msgid "Authentication failure, please try again."
 msgstr "Authentication failure, please try again."
@@ -91,50 +81,69 @@ msgstr "Authentication failure, please try again."
 msgid "User: %1"
 msgstr "User: %1"
 
-#: qml/MobileQuickAuthDialog.qml:146 qml/QuickAuthDialog.qml:181
+#: qml/MobileQuickAuthDialog.qml:146 qml/QuickAuthDialog.qml:325
 #, kde-format
 msgid "Switch…"
 msgstr "Switch…"
 
-#: qml/MobileQuickAuthDialog.qml:167 qml/QuickAuthDialog.qml:201
+#: qml/MobileQuickAuthDialog.qml:167 qml/QuickAuthDialog.qml:339
 #, kde-format
 msgid "Password…"
 msgstr "Password…"
 
-#: qml/MobileQuickAuthDialog.qml:175 qml/QuickAuthDialog.qml:210
+#: qml/MobileQuickAuthDialog.qml:175
 #, kde-format
 msgid "Details"
 msgstr "Details"
 
-#: qml/MobileQuickAuthDialog.qml:185 qml/QuickAuthDialog.qml:222
+#: qml/MobileQuickAuthDialog.qml:185 qml/QuickAuthDialog.qml:396
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: qml/MobileQuickAuthDialog.qml:191 qml/QuickAuthDialog.qml:228
+#: qml/MobileQuickAuthDialog.qml:191 qml/QuickAuthDialog.qml:409
 #, kde-format
 msgid "Cancel"
 msgstr "Cancel"
 
-#: qml/MobileQuickAuthDialog.qml:201 qml/QuickAuthDialog.qml:240
+#: qml/MobileQuickAuthDialog.qml:201 qml/QuickAuthDialog.qml:249
 #, kde-format
 msgid "Action:"
 msgstr "Action:"
 
-#: qml/MobileQuickAuthDialog.qml:205 qml/QuickAuthDialog.qml:244
+#: qml/MobileQuickAuthDialog.qml:205 qml/QuickAuthDialog.qml:215
 #, kde-format
 msgid "ID:"
 msgstr "ID:"
 
-#: qml/MobileQuickAuthDialog.qml:209 qml/QuickAuthDialog.qml:248
+#: qml/MobileQuickAuthDialog.qml:209 qml/QuickAuthDialog.qml:226
 #, kde-format
 msgid "Vendor:"
 msgstr "Vendor:"
 
-#: qml/QuickAuthDialog.qml:175
+#: qml/QuickAuthDialog.qml:23
 #, kde-format
-msgid "Authenticating as %1"
-msgstr "Authenticating as %1"
+msgid "User Account Control"
+msgstr ""
+
+#: qml/QuickAuthDialog.qml:271
+#, kde-format
+msgid "To continue, type an administrator password, and then click OK."
+msgstr ""
+
+#, kde-format
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andrew Coles, Steve Allewell"
+
+#, kde-format
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "andrew_coles@yahoo.co.uk, steve.allewell@gmail.com"
+
+#, kde-format
+#~ msgid "Authenticating as %1"
+#~ msgstr "Authenticating as %1"
 
 #~ msgid "<null>"
 #~ msgstr "<null>"

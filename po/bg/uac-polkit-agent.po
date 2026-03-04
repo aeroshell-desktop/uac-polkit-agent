@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: polkit-kde-agent-1\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"Report-Msgid-Bugs-To: https://gitgud.io/aeroshell/uac-polkit-agent/-/issues\n"
+"POT-Creation-Date: 2026-03-04 18:33+0100\n"
 "PO-Revision-Date: 2024-10-26 19:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.11.70\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Минчо Кондарев"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "mkondarev@yahoo.de"
 
 #: IdentitiesModel.cpp:27
 #, kde-format
@@ -38,27 +28,27 @@ msgctxt "%1 is the full user name, %2 is the user login name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: main.cpp:48
+#: main.cpp:49
 #, kde-format
 msgid "(c) 2009 Red Hat, Inc."
 msgstr "(c) 2009 Red Hat, Inc."
 
-#: main.cpp:49
+#: main.cpp:50
 #, kde-format
 msgid "Lukáš Tinkl"
 msgstr "Lukáš Tinkl"
 
-#: main.cpp:49
+#: main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Поддръжка"
 
-#: main.cpp:50
+#: main.cpp:51
 #, kde-format
 msgid "Jaroslav Reznik"
 msgstr "Jaroslav Reznik"
 
-#: main.cpp:50
+#: main.cpp:51
 #, kde-format
 msgid "Former maintainer"
 msgstr "Предишна поддръжка"
@@ -77,12 +67,12 @@ msgstr ""
 "настройките."
 
 #: qml/MobileQuickAuthDialog.qml:16 qml/MobileQuickAuthDialog.qml:108
-#: qml/QuickAuthDialog.qml:16 QuickAuthDialog.cpp:110
+#: QuickAuthDialog.cpp:115
 #, kde-format
 msgid "Authentication Required"
 msgstr "Изисква се удостоверяване"
 
-#: qml/MobileQuickAuthDialog.qml:57 qml/QuickAuthDialog.qml:72
+#: qml/MobileQuickAuthDialog.qml:57 qml/QuickAuthDialog.qml:357
 #, kde-format
 msgid "Authentication failure, please try again."
 msgstr "Грешка в удостоверяването, моля, опитайте отново."
@@ -92,47 +82,66 @@ msgstr "Грешка в удостоверяването, моля, опитай
 msgid "User: %1"
 msgstr "Потребител: %1"
 
-#: qml/MobileQuickAuthDialog.qml:146 qml/QuickAuthDialog.qml:181
+#: qml/MobileQuickAuthDialog.qml:146 qml/QuickAuthDialog.qml:325
 #, kde-format
 msgid "Switch…"
 msgstr "Превключване…"
 
-#: qml/MobileQuickAuthDialog.qml:167 qml/QuickAuthDialog.qml:201
+#: qml/MobileQuickAuthDialog.qml:167 qml/QuickAuthDialog.qml:339
 #, kde-format
 msgid "Password…"
 msgstr "Парола…"
 
-#: qml/MobileQuickAuthDialog.qml:175 qml/QuickAuthDialog.qml:210
+#: qml/MobileQuickAuthDialog.qml:175
 #, kde-format
 msgid "Details"
 msgstr "Подробности"
 
-#: qml/MobileQuickAuthDialog.qml:185 qml/QuickAuthDialog.qml:222
+#: qml/MobileQuickAuthDialog.qml:185 qml/QuickAuthDialog.qml:396
 #, kde-format
 msgid "OK"
 msgstr "Добре"
 
-#: qml/MobileQuickAuthDialog.qml:191 qml/QuickAuthDialog.qml:228
+#: qml/MobileQuickAuthDialog.qml:191 qml/QuickAuthDialog.qml:409
 #, kde-format
 msgid "Cancel"
 msgstr "Отказ"
 
-#: qml/MobileQuickAuthDialog.qml:201 qml/QuickAuthDialog.qml:240
+#: qml/MobileQuickAuthDialog.qml:201 qml/QuickAuthDialog.qml:249
 #, kde-format
 msgid "Action:"
 msgstr "Действие:"
 
-#: qml/MobileQuickAuthDialog.qml:205 qml/QuickAuthDialog.qml:244
+#: qml/MobileQuickAuthDialog.qml:205 qml/QuickAuthDialog.qml:215
 #, kde-format
 msgid "ID:"
 msgstr "ID:"
 
-#: qml/MobileQuickAuthDialog.qml:209 qml/QuickAuthDialog.qml:248
+#: qml/MobileQuickAuthDialog.qml:209 qml/QuickAuthDialog.qml:226
 #, kde-format
 msgid "Vendor:"
 msgstr "Доставчик:"
 
-#: qml/QuickAuthDialog.qml:175
+#: qml/QuickAuthDialog.qml:23
 #, kde-format
-msgid "Authenticating as %1"
-msgstr "Удостоверяване като %1"
+msgid "User Account Control"
+msgstr ""
+
+#: qml/QuickAuthDialog.qml:271
+#, kde-format
+msgid "To continue, type an administrator password, and then click OK."
+msgstr ""
+
+#, kde-format
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Минчо Кондарев"
+
+#, kde-format
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mkondarev@yahoo.de"
+
+#, kde-format
+#~ msgid "Authenticating as %1"
+#~ msgstr "Удостоверяване като %1"

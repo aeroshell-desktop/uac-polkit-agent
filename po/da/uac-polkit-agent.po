@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"Report-Msgid-Bugs-To: https://gitgud.io/aeroshell/uac-polkit-agent/-/issues\n"
+"POT-Creation-Date: 2026-03-04 18:33+0100\n"
 "PO-Revision-Date: 2019-05-07 13:23+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Martin Schlander"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "mschlander@opensuse.org"
 
 #: IdentitiesModel.cpp:27
 #, kde-format
@@ -38,27 +28,27 @@ msgctxt "%1 is the full user name, %2 is the user login name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: main.cpp:48
+#: main.cpp:49
 #, kde-format
 msgid "(c) 2009 Red Hat, Inc."
 msgstr "(c) 2009 Red Hat, Inc."
 
-#: main.cpp:49
+#: main.cpp:50
 #, kde-format
 msgid "Lukáš Tinkl"
 msgstr "Lukáš Tinkl"
 
-#: main.cpp:49
+#: main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Vedligeholder"
 
-#: main.cpp:50
+#: main.cpp:51
 #, kde-format
 msgid "Jaroslav Reznik"
 msgstr "Jaroslav Reznik"
 
-#: main.cpp:50
+#: main.cpp:51
 #, kde-format
 msgid "Former maintainer"
 msgstr "Tidligere vedligeholder"
@@ -75,12 +65,12 @@ msgid "No user to authenticate as. Please check your system configuration."
 msgstr ""
 
 #: qml/MobileQuickAuthDialog.qml:16 qml/MobileQuickAuthDialog.qml:108
-#: qml/QuickAuthDialog.qml:16 QuickAuthDialog.cpp:110
+#: QuickAuthDialog.cpp:115
 #, kde-format
 msgid "Authentication Required"
 msgstr "Autentificering kræves"
 
-#: qml/MobileQuickAuthDialog.qml:57 qml/QuickAuthDialog.qml:72
+#: qml/MobileQuickAuthDialog.qml:57 qml/QuickAuthDialog.qml:357
 #, kde-format
 msgid "Authentication failure, please try again."
 msgstr "Autentificering mislykkedes, prøv igen."
@@ -90,52 +80,71 @@ msgstr "Autentificering mislykkedes, prøv igen."
 msgid "User: %1"
 msgstr ""
 
-#: qml/MobileQuickAuthDialog.qml:146 qml/QuickAuthDialog.qml:181
+#: qml/MobileQuickAuthDialog.qml:146 qml/QuickAuthDialog.qml:325
 #, kde-format
 msgid "Switch…"
 msgstr ""
 
-#: qml/MobileQuickAuthDialog.qml:167 qml/QuickAuthDialog.qml:201
+#: qml/MobileQuickAuthDialog.qml:167 qml/QuickAuthDialog.qml:339
 #, fuzzy, kde-format
 #| msgid "Password:"
 msgid "Password…"
 msgstr "Adgangskode:"
 
-#: qml/MobileQuickAuthDialog.qml:175 qml/QuickAuthDialog.qml:210
+#: qml/MobileQuickAuthDialog.qml:175
 #, kde-format
 msgid "Details"
 msgstr "Detaljer"
 
-#: qml/MobileQuickAuthDialog.qml:185 qml/QuickAuthDialog.qml:222
+#: qml/MobileQuickAuthDialog.qml:185 qml/QuickAuthDialog.qml:396
 #, kde-format
 msgid "OK"
 msgstr ""
 
-#: qml/MobileQuickAuthDialog.qml:191 qml/QuickAuthDialog.qml:228
+#: qml/MobileQuickAuthDialog.qml:191 qml/QuickAuthDialog.qml:409
 #, kde-format
 msgid "Cancel"
 msgstr "Annullér"
 
-#: qml/MobileQuickAuthDialog.qml:201 qml/QuickAuthDialog.qml:240
+#: qml/MobileQuickAuthDialog.qml:201 qml/QuickAuthDialog.qml:249
 #, kde-format
 msgid "Action:"
 msgstr "Handling:"
 
-#: qml/MobileQuickAuthDialog.qml:205 qml/QuickAuthDialog.qml:244
+#: qml/MobileQuickAuthDialog.qml:205 qml/QuickAuthDialog.qml:215
 #, kde-format
 msgid "ID:"
 msgstr "Id:"
 
-#: qml/MobileQuickAuthDialog.qml:209 qml/QuickAuthDialog.qml:248
+#: qml/MobileQuickAuthDialog.qml:209 qml/QuickAuthDialog.qml:226
 #, kde-format
 msgid "Vendor:"
 msgstr "Leverandør:"
 
-#: qml/QuickAuthDialog.qml:175
+#: qml/QuickAuthDialog.qml:23
+#, kde-format
+msgid "User Account Control"
+msgstr ""
+
+#: qml/QuickAuthDialog.qml:271
+#, kde-format
+msgid "To continue, type an administrator password, and then click OK."
+msgstr ""
+
+#, kde-format
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Martin Schlander"
+
+#, kde-format
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mschlander@opensuse.org"
+
 #, fuzzy, kde-format
-#| msgid "Authentication Required"
-msgid "Authenticating as %1"
-msgstr "Autentificering kræves"
+#~| msgid "Authentication Required"
+#~ msgid "Authenticating as %1"
+#~ msgstr "Autentificering kræves"
 
 #~ msgid "<null>"
 #~ msgstr "<null>"

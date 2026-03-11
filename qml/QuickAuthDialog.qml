@@ -16,8 +16,6 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.sounds
 import org.kde.polkitkde
 
-import org.kde.plasma.plasma5support as Plasma5Support
-
 Kirigami.AbstractApplicationWindow {
     id: root
     title: i18n("User Account Control") //i18n("Authentication Required")
@@ -135,7 +133,7 @@ Kirigami.AbstractApplicationWindow {
                 left: parent.left
             }
 
-            implicitHeight: 52
+            implicitHeight: root.sevenLike ? 52 : 40
 
             gradient: Gradient {
                 orientation: Gradient.Horizontal
@@ -184,7 +182,7 @@ Kirigami.AbstractApplicationWindow {
                 margins: 20
             }
 
-            spacing: Kirigami.Units.largeSpacing
+            spacing: root.sevenLike ? Kirigami.Units.smallSpacing + Kirigami.Units.largeSpacing : Kirigami.Units.largeSpacing
 
             RowLayout {
                 id: content
@@ -206,32 +204,36 @@ Kirigami.AbstractApplicationWindow {
                     spacing: 0
                     Row {
                         spacing: 4
+
                         QQC2.Label {
                             text: i18n("ID:")
                             visible: root.sevenLike
                         }
+
                         QQC2.Label {
                             text: descriptionActionId
                         }
                     }
                     Row {
                         spacing: 4
+
                         visible: descriptionVendorName !== ""
+
                         QQC2.Label {
                             text: i18n("Vendor:")
                             visible: root.sevenLike
                         }
+
                         QQC2.Label {
                             text: descriptionVendorName
                             font.bold: true
 
                             Kirigami.UrlButton {
-                                anchors {
-                                    left: parent.right
-                                    leftMargin: -Kirigami.Units.mediumSpacing
-                                }
-                                height: parent.height
+                                anchors.left: parent.right
+
                                 width: Kirigami.Units.iconSizes.small
+                                height: parent.height
+
                                 text: " "
                                 url: descriptionVendorUrl
                                 font.underline: false
@@ -240,10 +242,12 @@ Kirigami.AbstractApplicationWindow {
                     }
                     Row {
                         spacing: 4
+
                         QQC2.Label {
                             text: i18n("Action:")
                             visible: root.sevenLike
                         }
+
                         QQC2.Label {
                             text: descriptionString
                         }
@@ -251,23 +255,31 @@ Kirigami.AbstractApplicationWindow {
                 }
             }
 
-            Item { Layout.preferredHeight: Kirigami.Units.smallSpacing }
+            ColumnLayout {
+                spacing: Kirigami.Units.largeSpacing
 
-            Rectangle {
-                Layout.fillWidth: true
-                Layout.rightMargin: -4
-                Layout.leftMargin: -4
+                Rectangle {
+                    id: sep
 
-                implicitHeight: 1
+                    Layout.fillWidth: true
+                    Layout.rightMargin: root.sevenLike ? -4 : 0
+                    Layout.leftMargin: root.sevenLike ? -4 : 0
 
-                color: "#dfdfdf"
-            }
+                    implicitHeight: 1
 
-            QQC2.Label {
-                Layout.fillWidth: true
+                    color: "#dfdfdf"
+                }
 
-                wrapMode: Text.WordWrap
-                text: i18n("To continue, type an administrator password, and then click OK.")
+                LayoutItemProxy { target: sep; visible: root.sevenLike }
+
+                QQC2.Label {
+                    Layout.fillWidth: true
+
+                    wrapMode: Text.WordWrap
+                    text: i18n("To continue, type an administrator password, and then click OK.")
+                }
+
+                LayoutItemProxy { target: sep; visible: !root.sevenLike }
             }
 
             Column {
@@ -277,7 +289,7 @@ Kirigami.AbstractApplicationWindow {
 
                 spacing: Kirigami.Units.largeSpacing
 
-                KSvg.FrameSvgItem {
+                Item {
                     id: user
 
                     anchors {
@@ -286,9 +298,6 @@ Kirigami.AbstractApplicationWindow {
                     }
 
                     height: 76
-
-                    imagePath: Qt.resolvedUrl("qrc:/qml/res/viewitem.svg")
-                    prefix: ""//"selected" TODO: implement this properly in the future
 
                     Row {
                         anchors.fill: parent

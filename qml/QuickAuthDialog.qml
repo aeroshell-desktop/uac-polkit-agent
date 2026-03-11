@@ -88,11 +88,6 @@ Kirigami.AbstractApplicationWindow {
 
     readonly property real intendedWindowWidth: (Kirigami.Units.largeSpacing * 57) - 5
     readonly property real intendedWindowHeight: mainContent.implicitHeight + bottomControls.height + (Kirigami.Units.largeSpacing * 2)
-    onIntendedWindowHeightChanged: {
-        minimumHeight = intendedWindowHeight;
-        height = intendedWindowHeight;
-        maximumHeight = intendedWindowHeight
-    }
 
     onActiveChanged: {
         if (active) {
@@ -268,7 +263,12 @@ Kirigami.AbstractApplicationWindow {
                 color: "#dfdfdf"
             }
 
-            QQC2.Label { text: i18n("To continue, type an administrator password, and then click OK.") }
+            QQC2.Label {
+                Layout.fillWidth: true
+
+                wrapMode: Text.WordWrap
+                text: i18n("To continue, type an administrator password, and then click OK.")
+            }
 
             Column {
                 id: authenticationPrompt

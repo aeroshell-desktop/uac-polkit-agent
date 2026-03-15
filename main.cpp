@@ -28,6 +28,12 @@
 
 int main(int argc, char *argv[])
 {
+    QByteArray start = qgetenv("USE_UAC_AGENT");
+    qDebug() << start;
+    // in case we got started through the xdg autostart entry
+    // can happen in a systemd-less distribution
+    if(start == QByteArrayLiteral("0") || start.isEmpty()) return 0;
+
     // disable ptrace
 #if HAVE_PR_SET_DUMPABLE
     prctl(PR_SET_DUMPABLE, 0);
